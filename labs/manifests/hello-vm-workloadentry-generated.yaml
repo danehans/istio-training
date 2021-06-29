@@ -1,0 +1,30 @@
+apiVersion: networking.istio.io/v1beta1
+kind: WorkloadEntry
+metadata:
+  annotations:
+    istio.io/autoRegistrationGroup: hello-vm
+    istio.io/connectedAt: "2021-06-29T03:45:58.922998732Z"
+    istio.io/workloadController: istiod-6fc675d854-js8bq
+  creationTimestamp: "2021-06-29T03:45:58Z"
+  generation: 1
+  labels:
+    app: hello-vm
+    service.istio.io/canonical-name: hello-vm
+    service.istio.io/canonical-version: latest
+  name: hello-vm-10.168.0.21
+  namespace: vm-namespace
+  ownerReferences:
+  - apiVersion: networking.istio.io/v1alpha3
+    controller: true
+    kind: WorkloadGroup
+    name: hello-vm
+    uid: f80e68d7-0466-43eb-99ea-6771e8952b09
+  resourceVersion: "7960"
+  uid: fca83180-de93-4d3e-9f18-809124f6a86e
+spec:
+  address: 10.168.0.21
+  labels:
+    app: hello-vm
+    service.istio.io/canonical-name: hello-vm
+    service.istio.io/canonical-version: latest
+  serviceAccount: vm-sa

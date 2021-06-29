@@ -1,0 +1,101 @@
+2021-06-29T03:45:58.625945Z	info	FLAG: --concurrency="0"
+2021-06-29T03:45:58.626068Z	info	FLAG: --domain=""
+2021-06-29T03:45:58.626085Z	info	FLAG: --help="false"
+2021-06-29T03:45:58.626092Z	info	FLAG: --log_as_json="false"
+2021-06-29T03:45:58.626098Z	info	FLAG: --log_caller=""
+2021-06-29T03:45:58.626110Z	info	FLAG: --log_output_level="default:info"
+2021-06-29T03:45:58.626116Z	info	FLAG: --log_rotate=""
+2021-06-29T03:45:58.626123Z	info	FLAG: --log_rotate_max_age="30"
+2021-06-29T03:45:58.626136Z	info	FLAG: --log_rotate_max_backups="1000"
+2021-06-29T03:45:58.626143Z	info	FLAG: --log_rotate_max_size="104857600"
+2021-06-29T03:45:58.626150Z	info	FLAG: --log_stacktrace_level="default:none"
+2021-06-29T03:45:58.626167Z	info	FLAG: --log_target="[stdout]"
+2021-06-29T03:45:58.626175Z	info	FLAG: --meshConfig="./etc/istio/config/mesh"
+2021-06-29T03:45:58.626181Z	info	FLAG: --outlierLogPath=""
+2021-06-29T03:45:58.626193Z	info	FLAG: --proxyComponentLogLevel="misc:error"
+2021-06-29T03:45:58.626199Z	info	FLAG: --proxyLogLevel="warning"
+2021-06-29T03:45:58.626206Z	info	FLAG: --serviceCluster="istio-proxy"
+2021-06-29T03:45:58.626217Z	info	FLAG: --stsPort="0"
+2021-06-29T03:45:58.626223Z	info	FLAG: --templateFile=""
+2021-06-29T03:45:58.626229Z	info	FLAG: --tokenManagerPlugin="GoogleTokenExchange"
+2021-06-29T03:45:58.626246Z	info	Version 1.9.5-67362755b7ca63ff1442d627a733627ed5c75df4-Clean
+2021-06-29T03:45:58.627118Z	info	Apply mesh config from file defaultConfig:
+  discoveryAddress: istiod.istio-system.svc:15012
+  proxyMetadata:
+    CANONICAL_REVISION: latest
+    CANONICAL_SERVICE: hello-vm
+    ISTIO_META_AUTO_REGISTER_GROUP: hello-vm
+    ISTIO_META_CLUSTER_ID: Kubernetes
+    ISTIO_META_DNS_CAPTURE: "true"
+    ISTIO_META_MESH_ID: ""
+    ISTIO_META_NETWORK: ""
+    ISTIO_META_WORKLOAD_NAME: hello-vm
+    ISTIO_METAJSON_LABELS: '{"app":"hello-vm","service.istio.io/canonical-name":"hello-vm","service.istio.io/canonical-version":"latest"}'
+    POD_NAMESPACE: vm-namespace
+    SERVICE_ACCOUNT: vm-sa
+    TRUST_DOMAIN: cluster.local
+  tracing:
+    zipkin:
+      address: zipkin.istio-system:9411
+
+2021-06-29T03:45:58.628790Z	info	Apply proxy config from env 
+serviceCluster: hello-vm.vm-namespace
+controlPlaneAuthPolicy: MUTUAL_TLS
+discoveryAddress: istiod.istio-system.svc:15012
+
+2021-06-29T03:45:58.629599Z	info	Effective config: binaryPath: /usr/local/bin/envoy
+concurrency: 2
+configPath: ./etc/istio/proxy
+controlPlaneAuthPolicy: MUTUAL_TLS
+discoveryAddress: istiod.istio-system.svc:15012
+drainDuration: 45s
+parentShutdownDuration: 60s
+proxyAdminPort: 15000
+proxyMetadata:
+  CANONICAL_REVISION: latest
+  CANONICAL_SERVICE: hello-vm
+  ISTIO_META_AUTO_REGISTER_GROUP: hello-vm
+  ISTIO_META_CLUSTER_ID: Kubernetes
+  ISTIO_META_DNS_CAPTURE: "true"
+  ISTIO_META_MESH_ID: ""
+  ISTIO_META_NETWORK: ""
+  ISTIO_META_WORKLOAD_NAME: hello-vm
+  ISTIO_METAJSON_LABELS: '{"app":"hello-vm","service.istio.io/canonical-name":"hello-vm","service.istio.io/canonical-version":"latest"}'
+  POD_NAMESPACE: vm-namespace
+  SERVICE_ACCOUNT: vm-sa
+  TRUST_DOMAIN: cluster.local
+serviceCluster: istio-proxy
+statNameLength: 189
+statusPort: 15020
+terminationDrainDuration: 5s
+tracing:
+  zipkin:
+    address: zipkin.istio-system:9411
+
+2021-06-29T03:45:58.629635Z	info	Proxy role	ips=[10.168.0.21 fe80::4001:aff:fea8:15] type=sidecar id=instance-1.vm-namespace domain=vm-namespace.svc.cluster.local
+2021-06-29T03:45:58.629644Z	info	JWT policy is third-party-jwt
+2021-06-29T03:45:58.629654Z	info	Pilot SAN: [istiod.istio-system.svc]
+2021-06-29T03:45:58.629659Z	info	CA Endpoint istiod.istio-system.svc:15012, provider Citadel
+2021-06-29T03:45:58.629697Z	info	Using CA istiod.istio-system.svc:15012 cert with certs: /etc/certs/root-cert.pem
+2021-06-29T03:45:58.629811Z	info	citadelclient	Citadel client using custom root cert: istiod.istio-system.svc:15012
+2021-06-29T03:45:58.662658Z	warn	citadelclient	cannot load key pair, using token instead: open /etc/certs/cert-chain.pem: no such file or directory
+2021-06-29T03:45:58.670201Z	info	ads	All caches have been synced up in 47.183319ms, marking server ready
+2021-06-29T03:45:58.670652Z	info	sds	SDS server for workload certificates started, listening on "./etc/istio/proxy/SDS"
+2021-06-29T03:45:58.671031Z	info	xdsproxy	Initializing with upstream address "istiod.istio-system.svc:15012" and cluster "Kubernetes"
+2021-06-29T03:45:58.671315Z	info	Starting proxy agent
+2021-06-29T03:45:58.671486Z	info	sds	Start SDS grpc server
+2021-06-29T03:45:58.671519Z	info	dns	Starting local udp DNS server at localhost:15053
+2021-06-29T03:45:58.671609Z	info	dns	Starting local tcp DNS server at localhost:15053
+2021-06-29T03:45:58.671672Z	info	Opening status port 15020
+2021-06-29T03:45:58.671844Z	info	Received new config, creating new Envoy epoch 0
+2021-06-29T03:45:58.671882Z	info	Epoch 0 starting
+2021-06-29T03:45:58.769885Z	info	Envoy command: [-c etc/istio/proxy/envoy-rev0.json --restart-epoch 0 --drain-time-s 45 --parent-shutdown-time-s 60 --service-cluster istio-proxy --service-node sidecar~10.168.0.21~instance-1.vm-namespace~vm-namespace.svc.cluster.local --local-address-ip-version v4 --bootstrap-version 3 --log-format %Y-%m-%dT%T.%fZ	%l	envoy %n	%v -l warning --component-log-level misc:error --concurrency 2]
+2021-06-29T03:45:58.880700Z	info	cache	Root cert has changed, start rotating root cert
+2021-06-29T03:45:58.880779Z	info	ads	XDS: Incremental Pushing:0 ConnectedEndpoints:0 Version:
+2021-06-29T03:45:58.880806Z	info	cache	generated new workload certificate	latency=210.2966ms ttl=23h59m59.119208305s
+2021-06-29T03:45:58.921691Z	info	xdsproxy	connected to upstream XDS server: istiod.istio-system.svc:15012
+2021-06-29T03:45:58.965668Z	info	ads	ADS: new connection for node:sidecar~10.168.0.21~instance-1.vm-namespace~vm-namespace.svc.cluster.local-1
+2021-06-29T03:45:58.965668Z	info	ads	ADS: new connection for node:sidecar~10.168.0.21~instance-1.vm-namespace~vm-namespace.svc.cluster.local-2
+2021-06-29T03:45:58.965837Z	info	cache	returned workload certificate from cache	ttl=23h59m59.034175487s
+2021-06-29T03:45:58.966640Z	info	sds	SDS: PUSH	resource=ROOTCA
+2021-06-29T03:45:58.966874Z	info	sds	SDS: PUSH	resource=default
